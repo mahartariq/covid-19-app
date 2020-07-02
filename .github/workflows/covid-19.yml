@@ -29,4 +29,4 @@ jobs:
       
       
     - name: Run Surge
-      run: surge ./ coronacounter.surge.sh --token ${{secrets.CORONA}}
+      run: surge ./ corona-meter.surge.sh --token ${{secrets.CORONA}}
