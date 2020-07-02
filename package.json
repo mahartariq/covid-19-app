@@ -1,5 +1,6 @@
 {
   "name": "myapp",
+  "homepage": "http://corona-meter.surge.sh/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

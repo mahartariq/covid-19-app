@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          COVID-19 APP Coming Soon!
+          Covid-19 App Coming Soon!
         </p>
         <a
           className="App-link"
