@@ -13,44 +13,60 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    height: '150px',
+    height: '140px',
   },
 }));
 
-
+const useStylesTypography = makeStyles({
+    root: {
+      width: '100%',
+      maxWidth: 500,
+    },
+  });
 
 export default function CenteredGrid() {
   const classes = useStyles();
+  const classTypography = useStylesTypography();
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-              <Typography variant="h3" gutterBottom>
+          <div className={classTypography.root}>
+              <Typography variant="h3" gutterBottom style={{color:'#aaa', fontWeight:'bold'}}>
         10,752,928
       </Typography>
-              Coronavirus Cases
+      <Typography variant="subtitle1" gutterBottom>
+        Coronavirus Cases
+      </Typography>
+              </div>
            </Paper>
         </Grid>
         
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-          
-          <Typography variant="h3" gutterBottom>
+          <div className={classTypography.root}>
+          <Typography variant="h3" gutterBottom style={{fontWeight:'bold'}}>
           517,701
       </Typography>
-           Deaths
-
+      <Typography variant="subtitle1" gutterBottom>
+        Deaths
+      </Typography>
+      </div>
            </Paper>
         </Grid>
 
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-          <Typography variant="h3" gutterBottom>
+          <div className={classTypography.root}>
+          <Typography variant="h3" gutterBottom style={{color:"#8ACA2B", fontWeight:'bold'}}>
         5,876,069
       </Typography>
-           Recovered
+      <Typography variant="subtitle1" gutterBottom>
+        Recovered
+      </Typography>
+      </div>
            </Paper>
         </Grid>
       </Grid>
